@@ -3,6 +3,6 @@ from login import views
 
 
 urlpatterns = [
-    path('login/', views.LoginView.as_view(), name="login"),
-    path('home/', views.HomeView.as_view(), name="home"),
+    path('login/', views.LoginViewSet.as_view({"get": "retrieve"}), name="login"),
+    path('home/', views.LoginViewSet.as_view({"post": "create"}), name="home"),
 ]
