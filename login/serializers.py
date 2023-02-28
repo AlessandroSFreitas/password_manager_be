@@ -6,4 +6,4 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(required=True, max_length=100)
 
 class SignUpSerializer(LoginSerializer):
-    pass
+    confirm_password = serializers.CharField(required=True, max_length=100)
